@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>留言板系統</title>
+  </head>
+  <body>
+    <h1>歡迎來到留言板系統</h1>
+    <form action="/" method="POST">
+      名稱<input type="text" name="name" /><br />
+      留言<input type="text" name="message" /><br />
+      <button>送出</button>
+    </form>
+    <hr />
+    <h2>留言</h2>
+    <ul>
+      <% messages.forEach(message => { %>
+      <li>
+        <strong><%= message.name %></strong>: <%= message.message %><br />
+        <small
+          >時間：<%= new Date(message.timestamp).toLocaleString("zh-TW")
+          %></small
+        >
+      </li>
+      <% }) %>
+    </ul>
+    <form action="/clear" method="POST">
+      <button type="submit">清除所有留言</button>
+    </form>
+  </body>
+</html>
