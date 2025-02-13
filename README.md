@@ -8,12 +8,16 @@
 安裝
 1.clone此儲存庫
    git clone https://github.com/your-username/message-board-system.git
+   
 2.安裝所需的套件
   cd message-board-system
   npm install
+  
 3.設定資料庫連線
+
 4.啟動伺服器
   npm start
+  
 5.開啟瀏覽器http://localhost:3000
 
 
