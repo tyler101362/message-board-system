@@ -8,6 +8,7 @@
 安裝
 
 1.clone此儲存庫
+   ```bash
    git clone https://github.com/your-username/message-board-system.git
    
 2.安裝所需的套件
